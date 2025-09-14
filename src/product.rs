@@ -66,6 +66,7 @@ pub enum FilamentMaterial {
     Nylon,
     PC,
     ASA,
+    PCTG,
     Unspecified,
     Other(String),
 }
@@ -83,6 +84,7 @@ impl FromStr for FilamentMaterial {
             "Nylon" => Self::Nylon,
             "PC" => Self::PC,
             "ASA" => Self::ASA,
+            "PCTG" => Self::PCTG,
             "Unspecified" => Self::Unspecified,
             other => Self::Other(other.to_string()),
         })
@@ -100,6 +102,7 @@ impl std::fmt::Display for FilamentMaterial {
             Self::Nylon => write!(f, "Nylon"),
             Self::PC => write!(f, "PC"),
             Self::ASA => write!(f, "ASA"),
+            Self::PCTG => write!(f, "PCTG"),
             Self::Unspecified => write!(f, "Unspecified"),
             Self::Other(s) => write!(f, "{}", s),
         }
